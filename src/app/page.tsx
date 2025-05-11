@@ -332,28 +332,49 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <div className="bg-white/5 backdrop-blur-xl p-8 md:p-12 rounded-2xl border border-white/10 inline-block">
+            <div className="grid sm:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
               <motion.div
-                animate={{
-                  scale: [1, 1.05, 1],
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-                className="text-5xl md:text-7xl mb-6"
+                whileHover={{ scale: 1.02, y: -5 }}
+                className="bg-white/5 backdrop-blur-xl p-8 md:p-10 rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-500"
               >
-                🎁
+                <div className="text-4xl md:text-5xl mb-4">🥈</div>
+                <h3 className="font-space text-xl md:text-2xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 tracking-wide">
+                  2nd Place
+                </h3>
+                <p className="font-inter text-2xl md:text-3xl text-gray-300 font-light">
+                  $1,000
+                </p>
               </motion.div>
-              <h3 className="font-space text-2xl md:text-3xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 tracking-wide">
-                Prizes Coming Soon
-              </h3>
-              <p className="font-inter text-base md:text-xl text-gray-300 max-w-2xl mx-auto font-light leading-relaxed">
-                We&apos;re preparing an exciting prize pool that will reward
-                innovation and excellence. Stay tuned for the big reveal!
-              </p>
+
+              <motion.div
+                whileHover={{ scale: 1.02, y: -5 }}
+                className="bg-white/5 backdrop-blur-xl p-8 md:p-10 rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-500"
+              >
+                <div className="text-4xl md:text-5xl mb-4">🏆</div>
+                <h3 className="font-space text-xl md:text-2xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 tracking-wide">
+                  1st Place
+                </h3>
+                <p className="font-inter text-2xl md:text-3xl text-gray-300 font-light">
+                  $1,500
+                </p>
+              </motion.div>
+
+              <motion.div
+                whileHover={{ scale: 1.02, y: -5 }}
+                className="bg-white/5 backdrop-blur-xl p-8 md:p-10 rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-500"
+              >
+                <div className="text-4xl md:text-5xl mb-4">🥉</div>
+                <h3 className="font-space text-xl md:text-2xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 tracking-wide">
+                  3rd Place
+                </h3>
+                <p className="font-inter text-2xl md:text-3xl text-gray-300 font-light">
+                  $500
+                </p>
+              </motion.div>
             </div>
+            <p className="font-inter text-base md:text-lg text-gray-400 mt-8 font-light">
+              Total Prize Pool: $3,000
+            </p>
           </motion.div>
         </div>
       </section>
