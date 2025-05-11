@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { Inter, Space_Grotesk } from "next/font/google";
 
@@ -40,12 +39,10 @@ export default function Home() {
       {/* Hero Section with Parallax */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image
+          <img
             src="/ahh.jpeg"
             alt="Hackathon Banner"
-            fill
-            className="object-cover opacity-25"
-            priority
+            className="object-cover opacity-25 w-full h-full"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/60 to-black/90" />
         </div>
@@ -116,7 +113,7 @@ export default function Home() {
           >
             <div className="flex items-center justify-center gap-4">
               <div className="flex items-center gap-3">
-                <Image
+                <img
                   src="/polkadot.png"
                   alt="Polkadot Logo"
                   width={24}
@@ -128,7 +125,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex items-center gap-3">
-                <Image
+                <img
                   src="/edge.png"
                   alt="EdgeDistributor Logo"
                   width={24}
@@ -139,7 +136,7 @@ export default function Home() {
               </div>
               <span className="text-gray-400">×</span>
               <div className="flex items-center gap-3">
-                <Image
+                <img
                   src="/montaq.jpeg"
                   alt="MontaQ Labs Logo"
                   width={24}
