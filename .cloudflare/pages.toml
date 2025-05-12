@@ -1,12 +1,11 @@
 [build]
 command = "npm install -g npm@9 && npm run build"
+node_version = "18.19.0"
+npm_version = "9.0.0"
 
 [build.environment]
 NODE_VERSION = "18.19.0"
 NPM_VERSION = "9.0.0"
 
 [site]
-bucket = ".next"
-
-[env.production]
-pages_build_output_dir = "out" 
+output_directory = "out" 
