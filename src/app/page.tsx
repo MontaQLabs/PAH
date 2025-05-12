@@ -836,14 +836,8 @@ export default function Home() {
                 icon: "⚡",
               },
               {
-                title: "Chain ⛓️",
-                subtitle: "Category 3",
-                description: "Building a blockchain based on Polkadot SDK",
-                icon: "��",
-              },
-              {
                 title: "Open Topic 💡",
-                subtitle: "Category 4",
+                subtitle: "Category 3",
                 description: "Your innovative ideas",
                 icon: "🧠",
               },
