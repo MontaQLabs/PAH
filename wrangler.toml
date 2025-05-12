@@ -1,0 +1,17 @@
+[build]
+command = "npm run build"
+node_compat = true 
+node_version = "20.9.0"
+
+[build.environment]
+NODE_VERSION = "20.9.0"
+
+[site]
+bucket = ".next"
+
+[build.processing]
+skip_build = false
+
+[env.production]
+name = "hackathon-landing-production"
+pages_build_output_dir = ".next" 
