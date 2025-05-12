@@ -275,13 +275,13 @@ export default function Home() {
                     whileHover={{ rotate: 10, scale: 1.1 }}
                     transition={{ duration: 0.2 }}
                     src="/edge.png"
-                    alt="EdgeDistributor Logo"
+                    alt="Edgetributor Logo"
                     width={20}
                     height={20}
                     className="opacity-90"
                   />
                   <span className="text-white text-xs sm:text-sm">
-                    EdgeDistributor Subdao
+                    Edgetributor Subdao
                   </span>
                 </motion.div>
                 <motion.span
