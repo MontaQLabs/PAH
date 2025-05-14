@@ -38,15 +38,6 @@ const fadeInUp = {
   transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] },
 };
 
-const staggerContainer = {
-  animate: {
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2,
-    },
-  },
-};
-
 // Create a component for the Register button with link
 const RegisterButton = ({ className = "", style = {} }) => (
   <Link
@@ -549,160 +540,26 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             viewport={{ once: true }}
+            className="mt-10 text-center"
           >
-            <h3 className="font-space text-2xl sm:text-3xl font-bold mb-6 text-white text-center">
-              This hackathon is divided into two{" "}
-              <span style={{ color: COLORS.PINK }}>exciting</span> stages:
-            </h3>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12">
-              {/* Online Eliminator Round */}
+            <div className="bg-white/10 p-6 sm:p-8 border-2 border-white/20 rounded-lg max-w-2xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+                initial={{ y: -10, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
-                whileHover={{
-                  scale: 1.03,
-                  boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.2)",
-                  borderColor: COLORS.PINK,
-                }}
-                className="bg-white/5 p-6 sm:p-8 border-2 border-white/20 rounded-lg relative"
               >
-                <div
-                  className="absolute -top-4 -right-4 w-12 h-12 rounded-full flex items-center justify-center text-2xl"
-                  style={{ backgroundColor: COLORS.PINK }}
-                >
-                  1️⃣
-                </div>
-                <h4 className="font-space text-xl sm:text-2xl font-bold mb-4 text-white">
-                  Online Eliminator Round 🔥
-                </h4>
-                <ul className="space-y-3">
-                  <motion.li
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: 0.5 }}
-                    viewport={{ once: true }}
-                    className="flex items-start gap-2"
-                  >
-                    <span className="text-xl">⏱️</span>
-                    <p className="font-inter text-white/90">
-                      <span className="font-bold text-white">1 week</span> to
-                      build an MVP
-                    </p>
-                  </motion.li>
-                  <motion.li
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: 0.6 }}
-                    viewport={{ once: true }}
-                    className="flex items-start gap-2"
-                  >
-                    <span className="text-xl">🛟</span>
-                    <p className="font-inter text-white/90">
-                      <span className="font-bold text-white">Lifelines</span>{" "}
-                      for everyone: Mini-workshop, live AMA and on-demand
-                      mentoring
-                    </p>
-                  </motion.li>
-                  <motion.li
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: 0.7 }}
-                    viewport={{ once: true }}
-                    className="flex items-start gap-2"
-                  >
-                    <span className="text-xl">🏆</span>
-                    <p className="font-inter text-white/90">
-                      <span className="font-bold text-white">Top 12 teams</span>{" "}
-                      will be selected for the Finalè Round
-                    </p>
-                  </motion.li>
-                </ul>
+                <h3 className="font-space text-xl sm:text-2xl md:text-3xl font-bold mb-4 tracking-wide text-white">
+                  Join the{" "}
+                  <span style={{ color: COLORS.PINK }}>Revolution</span> 🚀
+                </h3>
+                <p className="font-inter text-base sm:text-lg text-white/80 mb-6">
+                  Build the next generation of decentralized applications on
+                  Polkadot AssetHub
+                </p>
               </motion.div>
 
-              {/* In-person Finalè Round */}
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.5 }}
-                viewport={{ once: true }}
-                whileHover={{
-                  scale: 1.03,
-                  boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.2)",
-                  borderColor: COLORS.PINK,
-                }}
-                className="bg-white/5 p-6 sm:p-8 border-2 border-white/20 rounded-lg relative"
-              >
-                <div
-                  className="absolute -top-4 -right-4 w-12 h-12 rounded-full flex items-center justify-center text-2xl"
-                  style={{ backgroundColor: COLORS.PINK }}
-                >
-                  2️⃣
-                </div>
-                <h4 className="font-space text-xl sm:text-2xl font-bold mb-4 text-white">
-                  In-person Finalè Round in Goa 🏝️
-                </h4>
-                <ul className="space-y-3">
-                  <motion.li
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: 0.6 }}
-                    viewport={{ once: true }}
-                    className="flex items-start gap-2"
-                  >
-                    <span className="text-xl">🏡</span>
-                    <p className="font-inter text-white/90">
-                      <span className="font-bold text-white">2 days</span> to
-                      refine and deploy the project live in one of the biggest
-                      villas in Goa with sponsored stay & food
-                    </p>
-                  </motion.li>
-                  <motion.li
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: 0.7 }}
-                    viewport={{ once: true }}
-                    className="flex items-start gap-2"
-                  >
-                    <span className="text-xl">💸</span>
-                    <p className="font-inter text-white/90">
-                      <span className="font-bold text-white">
-                        Top 3 team rewards:
-                      </span>{" "}
-                      $1500, $1000, $700 USD
-                    </p>
-                  </motion.li>
-                </ul>
-              </motion.div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            viewport={{ once: true }}
-            className="mt-12 text-center"
-          >
-            <div className="inline-block bg-white/10 p-3 sm:p-4 rounded-lg border border-white/20">
-              <p className="font-inter text-base sm:text-lg text-white">
-                <span className="text-xl mr-2">🌟</span>
-                <span className="font-bold" style={{ color: COLORS.PINK }}>
-                  Don&apos;t miss this chance!
-                </span>{" "}
-                Build on Polkadot and win big!
-              </p>
-            </div>
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 1 }}
-              viewport={{ once: true }}
-              className="mt-8"
-            >
-              <div className="flex flex-wrap gap-4 justify-center">
+              <div className="flex flex-wrap gap-4 justify-center mb-4">
                 <RegisterButton
                   className="text-base sm:text-lg"
                   style={{
@@ -718,18 +575,11 @@ export default function Home() {
                   }}
                 />
               </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 1.1 }}
-              viewport={{ once: true }}
-              className="mt-4 text-white/70"
-            >
-              <p className="font-inter text-sm">
+
+              <p className="font-inter text-sm text-white/70 mt-4">
                 Registrations Open till 28th May
               </p>
-            </motion.div>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -812,97 +662,125 @@ export default function Home() {
           </motion.div>
 
           <motion.div
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="animate"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
             viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8"
+            className="mx-auto max-w-4xl"
           >
-            {[
-              {
-                title: "Infrastructure 🛠️",
-                subtitle: "Category 1",
-                description: "Polkadot ecological developer tools",
-                icon: "🔧",
-              },
-              {
-                title: "Hot 🔥",
-                subtitle: "Category 2",
-                description: "Smart Contract, DeFi, AI, Layer2, DePIN, etc",
-                icon: "⚡",
-              },
-              {
-                title: "Open Topic 💡",
-                subtitle: "Category 3",
-                description: "Your innovative ideas",
-                icon: "🧠",
-              },
-            ].map((track, index) => (
+            <motion.div
+              variants={fadeInUp}
+              whileHover={{
+                scale: 1.02,
+                borderColor: COLORS.PINK,
+                transition: { duration: 0.2 },
+              }}
+              className="group bg-transparent p-8 sm:p-10 md:p-12 border-2 border-black text-black relative overflow-hidden"
+            >
               <motion.div
-                key={track.title}
-                variants={fadeInUp}
-                custom={index}
+                initial={{ height: "0%", opacity: 0 }}
                 whileHover={{
-                  scale: 1.02,
-                  borderColor: COLORS.PINK,
-                  transition: { duration: 0.2 },
+                  height: "100%",
+                  opacity: 0.05,
+                  transition: { duration: 0.3 },
                 }}
-                className="group bg-transparent p-6 sm:p-8 md:p-10 border-2 border-black text-black relative overflow-hidden"
-              >
-                <motion.div
-                  initial={{ height: "0%", opacity: 0 }}
-                  whileHover={{
-                    height: "100%",
-                    opacity: 0.05,
-                    transition: { duration: 0.3 },
-                  }}
-                  className="absolute inset-0 w-full bg-black pointer-events-none"
-                  style={{ originY: 0 }}
-                />
+                className="absolute inset-0 w-full bg-black pointer-events-none"
+                style={{ originY: 0 }}
+              />
 
-                <div className="flex items-start gap-4 sm:gap-6 relative z-10">
+              <div className="flex flex-col items-center text-center gap-6 relative z-10">
+                <div className="flex gap-4 items-center">
                   <motion.span
                     initial={{ scale: 0.8, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
-                    transition={{ delay: 0.1 * index, duration: 0.5 }}
+                    transition={{ duration: 0.5 }}
                     viewport={{ once: true }}
-                    className="text-3xl sm:text-4xl md:text-5xl flex-shrink-0"
+                    className="text-4xl sm:text-5xl md:text-6xl"
                   >
-                    {track.icon}
+                    🚀
                   </motion.span>
-                  <div>
-                    <motion.h3
-                      initial={{ x: -20, opacity: 0 }}
-                      whileInView={{ x: 0, opacity: 1 }}
-                      transition={{ delay: 0.2 * index, duration: 0.5 }}
-                      viewport={{ once: true }}
-                      className="font-space text-lg sm:text-xl md:text-2xl font-bold mb-1 sm:mb-2 tracking-wide text-black"
-                    >
-                      {track.title}
-                    </motion.h3>
-                    <motion.p
-                      initial={{ x: -10, opacity: 0 }}
-                      whileInView={{ x: 0, opacity: 1 }}
-                      transition={{ delay: 0.3 * index, duration: 0.5 }}
-                      viewport={{ once: true }}
-                      className="font-inter text-xs sm:text-sm md:text-base font-normal"
-                      style={{ color: COLORS.PINK }}
-                    >
-                      {track.subtitle}
-                    </motion.p>
-                    <motion.p
-                      initial={{ y: 10, opacity: 0 }}
-                      whileInView={{ y: 0, opacity: 1 }}
-                      transition={{ delay: 0.4 * index, duration: 0.5 }}
-                      viewport={{ once: true }}
-                      className="font-inter text-xs sm:text-sm md:text-base text-black/70 font-normal leading-relaxed"
-                    >
-                      {track.description}
-                    </motion.p>
-                  </div>
+                  <motion.h3
+                    initial={{ y: -10, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                    viewport={{ once: true }}
+                    className="font-space text-2xl sm:text-3xl md:text-4xl font-bold tracking-wide text-black"
+                  >
+                    Build on AssetHub
+                  </motion.h3>
                 </div>
-              </motion.div>
-            ))}
+
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  viewport={{ once: true }}
+                  className="flex flex-wrap justify-center gap-3 my-3"
+                >
+                  {[
+                    "Smart Contracts",
+                    "AI",
+                    "AI Agents",
+                    "DePIN",
+                    "Tooling",
+                  ].map((category, idx) => (
+                    <motion.span
+                      key={category}
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.3, delay: 0.1 * idx + 0.4 }}
+                      viewport={{ once: true }}
+                      className="inline-block px-3 py-1 rounded-full text-sm"
+                      style={{
+                        backgroundColor: COLORS.PINK,
+                        color: COLORS.WHITE,
+                      }}
+                    >
+                      {category}
+                    </motion.span>
+                  ))}
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.5 }}
+                  viewport={{ once: true }}
+                  className="bg-black/5 p-6 rounded-lg mt-4"
+                >
+                  <h4 className="font-space text-lg sm:text-xl font-bold mb-4 text-black">
+                    Evaluation Criteria
+                  </h4>
+                  <p className="font-inter text-sm sm:text-base text-black/80 mb-4">
+                    Projects will be evaluated based on the implementation and
+                    effective use of Polkadot AssetHub. Solutions that
+                    demonstrate innovative applications, technical excellence,
+                    and practical utility within the Polkadot ecosystem will be
+                    highly valued.
+                  </p>
+                  <ul className="space-y-2 text-left">
+                    <li className="flex items-start gap-2">
+                      <span>•</span>
+                      <span className="font-inter text-sm sm:text-base text-black/80">
+                        Technical implementation quality
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span>•</span>
+                      <span className="font-inter text-sm sm:text-base text-black/80">
+                        Innovative use of AssetHub capabilities
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span>•</span>
+                      <span className="font-inter text-sm sm:text-base text-black/80">
+                        Potential impact on the Polkadot ecosystem
+                      </span>
+                    </li>
+                  </ul>
+                </motion.div>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </section>
