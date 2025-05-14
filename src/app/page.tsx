@@ -342,7 +342,7 @@ export default function Home() {
                   className="opacity-90"
                 />
                 <span className="text-white text-xs sm:text-sm">
-                  Polkadot Events Bounty
+                  DOT Events Bounty
                 </span>
               </motion.div>
             </div>
@@ -666,21 +666,6 @@ export default function Home() {
                     viewport={{ once: true }}
                     className="flex items-start gap-2"
                   >
-                    <span className="text-xl">💰</span>
-                    <p className="font-inter text-white/90">
-                      <span className="font-bold text-white">
-                        Guaranteed $200 USD
-                      </span>{" "}
-                      rewards per team at minimum
-                    </p>
-                  </motion.li>
-                  <motion.li
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: 0.8 }}
-                    viewport={{ once: true }}
-                    className="flex items-start gap-2"
-                  >
                     <span className="text-xl">💸</span>
                     <p className="font-inter text-white/90">
                       <span className="font-bold text-white">
@@ -733,6 +718,17 @@ export default function Home() {
                   }}
                 />
               </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 1.1 }}
+              viewport={{ once: true }}
+              className="mt-4 text-white/70"
+            >
+              <p className="font-inter text-sm">
+                Registrations Open till 28th May
+              </p>
             </motion.div>
           </motion.div>
         </div>
