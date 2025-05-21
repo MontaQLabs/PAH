@@ -524,12 +524,12 @@ export default function Home() {
               className="font-inter text-base sm:text-lg md:text-xl text-white leading-relaxed"
             >
               <span className="text-2xl">💥</span> Polkadot AssetHub Hackathon
-              is{" "}
+              is the{" "}
               <span className="font-bold" style={{ color: COLORS.PINK }}>
                 first of its kind
               </span>{" "}
               hybrid hackathon scheduled on the occasion of the upcoming Hub
-              launch which lower the entry barrier and opens up the
+              launch. It lowers the entry barrier and opens up the
               opportunities for solidity developers to enter the Polkadot
               ecosystem more natively than ever before!
             </motion.p>
@@ -753,8 +753,8 @@ export default function Home() {
                   </h4>
                   <p className="font-inter text-sm sm:text-base text-black/80 mb-4">
                     Projects will be evaluated based on the implementation and
-                    effective use of Polkadot AssetHub. Solutions that
-                    demonstrate innovative applications, technical excellence,
+                    effective use of Polkadot AssetHub and PolkaVM. Solutions that
+                    demonstrate innovative applications, technical excellence, creative use of Solidity within current constraints
                     and practical utility within the Polkadot ecosystem will be
                     highly valued.
                   </p>
@@ -762,19 +762,19 @@ export default function Home() {
                     <li className="flex items-start gap-2">
                       <span>•</span>
                       <span className="font-inter text-sm sm:text-base text-black/80">
-                        Technical implementation quality
+                        Technical implementation quality within PolkaVM
                       </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span>•</span>
                       <span className="font-inter text-sm sm:text-base text-black/80">
-                        Innovative use of AssetHub capabilities
+                        Innovative and self-contained logic using Solidity smart contracts
                       </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span>•</span>
                       <span className="font-inter text-sm sm:text-base text-black/80">
-                        Potential impact on the Polkadot ecosystem
+                        Practical value, relevance and potential impact on the Polkadot ecosystem
                       </span>
                     </li>
                   </ul>
@@ -1098,7 +1098,6 @@ export default function Home() {
                 {[
                   "Projects must be new and not previously developed",
                   "All code must be open source and properly documented",
-                  "Teams must use the Polkadot SDK for relevant categories",
                   "Projects must be submitted before the deadline",
                 ].map((rule, index) => (
                   <motion.li
