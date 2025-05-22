@@ -1286,7 +1286,7 @@ export default function Home() {
               <img
                 src="/web3mumbai.png"
                 alt="Web3 Mumbai"
-                className="h-16 sm:h-20 object-contain brightness-0 invert"
+                className="h-24 sm:h-32 object-contain brightness-0 invert"
               />
             </motion.div>
           </motion.div>
@@ -1328,7 +1328,7 @@ export default function Home() {
               viewport={{ once: true }}
               className="group"
             >
-              <div className="relative overflow-hidden rounded-lg bg-black/5 aspect-[3/4]">
+              <div className="relative overflow-hidden rounded-lg bg-black/5 aspect-square w-40 h-40 mx-auto">
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.3 }}
@@ -1341,27 +1341,27 @@ export default function Home() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </motion.div>
-                <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                  <h3 className="font-space text-xl font-bold text-white mb-2">
-                    Abhiraj Mengade
-                  </h3>
-                  <p className="font-inter text-sm text-white/80 mb-4">Judge</p>
-                  <Link
-                    href="https://www.linkedin.com/in/abhiraj-mengade/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm text-white hover:text-pink-400 transition-colors"
+              </div>
+              <div className="text-center mt-4">
+                <h3 className="font-space text-lg font-bold text-black mb-2">
+                  Abhiraj Mengade
+                </h3>
+                <p className="font-inter text-sm text-black/80 mb-2">Judge</p>
+                <Link
+                  href="https://www.linkedin.com/in/abhiraj-mengade/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm text-black hover:text-pink-400 transition-colors"
+                >
+                  <span>LinkedIn</span>
+                  <svg
+                    className="w-4 h-4"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
                   >
-                    <span>LinkedIn</span>
-                    <svg
-                      className="w-4 h-4"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                    </svg>
-                  </Link>
-                </div>
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                  </svg>
+                </Link>
               </div>
             </motion.div>
 
@@ -1373,7 +1373,7 @@ export default function Home() {
               viewport={{ once: true }}
               className="group"
             >
-              <div className="relative overflow-hidden rounded-lg bg-black/5 aspect-[3/4]">
+              <div className="relative overflow-hidden rounded-lg bg-black/5 aspect-square w-40 h-40 mx-auto">
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.3 }}
@@ -1386,27 +1386,27 @@ export default function Home() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </motion.div>
-                <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                  <h3 className="font-space text-xl font-bold text-white mb-2">
-                    Parth Mittal
-                  </h3>
-                  <p className="font-inter text-sm text-white/80 mb-4">Judge</p>
-                  <Link
-                    href="https://www.linkedin.com/in/mittal-parth"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm text-white hover:text-pink-400 transition-colors"
+              </div>
+              <div className="text-center mt-4">
+                <h3 className="font-space text-lg font-bold text-black mb-2">
+                  Parth Mittal
+                </h3>
+                <p className="font-inter text-sm text-black/80 mb-2">Judge</p>
+                <Link
+                  href="https://www.linkedin.com/in/mittal-parth"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm text-black hover:text-pink-400 transition-colors"
+                >
+                  <span>LinkedIn</span>
+                  <svg
+                    className="w-4 h-4"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
                   >
-                    <span>LinkedIn</span>
-                    <svg
-                      className="w-4 h-4"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                    </svg>
-                  </Link>
-                </div>
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                  </svg>
+                </Link>
               </div>
             </motion.div>
 
@@ -1418,7 +1418,7 @@ export default function Home() {
               viewport={{ once: true }}
               className="group"
             >
-              <div className="relative overflow-hidden rounded-lg bg-black/5 aspect-[3/4]">
+              <div className="relative overflow-hidden rounded-lg bg-black/5 aspect-square w-40 h-40 mx-auto">
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.3 }}
@@ -1431,27 +1431,27 @@ export default function Home() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </motion.div>
-                <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                  <h3 className="font-space text-xl font-bold text-white mb-2">
-                    Haoyang Li
-                  </h3>
-                  <p className="font-inter text-sm text-white/80 mb-4">Judge</p>
-                  <Link
-                    href="https://www.linkedin.com/in/haoyang-li-eu"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm text-white hover:text-pink-400 transition-colors"
+              </div>
+              <div className="text-center mt-4">
+                <h3 className="font-space text-lg font-bold text-black mb-2">
+                  Haoyang Li
+                </h3>
+                <p className="font-inter text-sm text-black/80 mb-2">Judge</p>
+                <Link
+                  href="https://www.linkedin.com/in/haoyang-li-eu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm text-black hover:text-pink-400 transition-colors"
+                >
+                  <span>LinkedIn</span>
+                  <svg
+                    className="w-4 h-4"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
                   >
-                    <span>LinkedIn</span>
-                    <svg
-                      className="w-4 h-4"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                    </svg>
-                  </Link>
-                </div>
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                  </svg>
+                </Link>
               </div>
             </motion.div>
           </div>
