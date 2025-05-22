@@ -262,18 +262,25 @@ export default function Home() {
                   transition={{ duration: 0.5, delay: 1.2 }}
                   className="flex items-center gap-2 sm:gap-3"
                 >
-                  <motion.img
-                    whileHover={{ rotate: 10, scale: 1.1 }}
-                    transition={{ duration: 0.2 }}
-                    src="/edge.png"
-                    alt="Edgetributor Logo"
-                    width={20}
-                    height={20}
-                    className="opacity-90"
-                  />
-                  <span className="text-white text-xs sm:text-sm">
-                    Edgetributor Subdao
-                  </span>
+                  <Link
+                    href="https://x.com/edgetributors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 sm:gap-3 group"
+                  >
+                    <motion.img
+                      whileHover={{ rotate: 10, scale: 1.1 }}
+                      transition={{ duration: 0.2 }}
+                      src="/edge.png"
+                      alt="Edgetributor Logo"
+                      width={20}
+                      height={20}
+                      className="opacity-90"
+                    />
+                    <span className="text-white text-xs sm:text-sm group-hover:text-pink-400 transition-colors">
+                      Edgetributor Subdao
+                    </span>
+                  </Link>
                 </motion.div>
                 <motion.span
                   initial={{ opacity: 0 }}
@@ -289,18 +296,25 @@ export default function Home() {
                   transition={{ duration: 0.5, delay: 1.4 }}
                   className="flex items-center gap-2 sm:gap-3"
                 >
-                  <motion.img
-                    whileHover={{ rotate: -10, scale: 1.1 }}
-                    transition={{ duration: 0.2 }}
-                    src="/montaq.jpeg"
-                    alt="MontaQ Labs Logo"
-                    width={20}
-                    height={20}
-                    className="opacity-90 rounded-full"
-                  />
-                  <span className="text-white text-xs sm:text-sm">
-                    MontaQ Labs
-                  </span>
+                  <Link
+                    href="https://x.com/montaqlabs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 sm:gap-3 group"
+                  >
+                    <motion.img
+                      whileHover={{ rotate: -10, scale: 1.1 }}
+                      transition={{ duration: 0.2 }}
+                      src="/montaq.jpeg"
+                      alt="MontaQ Labs Logo"
+                      width={20}
+                      height={20}
+                      className="opacity-90 rounded-full"
+                    />
+                    <span className="text-white text-xs sm:text-sm group-hover:text-pink-400 transition-colors">
+                      MontaQ Labs
+                    </span>
+                  </Link>
                 </motion.div>
               </div>
             </div>
@@ -339,202 +353,103 @@ export default function Home() {
             </div>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-            className="space-y-4 sm:space-y-6"
-          >
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 md:gap-8">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 1.8 }}
-                whileHover={{
-                  scale: 1.05,
-                  boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1)",
-                }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full sm:w-auto p-4 sm:p-6 rounded-none border-2 border-white"
-                style={{
-                  backgroundColor: COLORS.PINK,
-                  color: COLORS.WHITE,
-                  borderColor: COLORS.BLACK,
-                }}
-              >
-                <h3 className="font-space text-base sm:text-lg md:text-xl font-bold mb-1 sm:mb-2 tracking-wide">
-                  Eliminator Round
-                </h3>
-                <p className="font-inter text-sm sm:text-base md:text-lg">
-                  30th May - 6th June
-                </p>
-                <p className="font-inter text-xs sm:text-sm text-white/80">
-                  Online
-                </p>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 1.9 }}
-                whileHover={{
-                  scale: 1.05,
-                  boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1)",
-                }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full sm:w-auto bg-transparent text-white p-4 sm:p-6 rounded-none border-2"
-                style={{
-                  backgroundColor: "transparent",
-                  borderColor: COLORS.PINK,
-                  color: COLORS.WHITE,
-                }}
-              >
-                <h3 className="font-space text-base sm:text-lg md:text-xl font-bold mb-1 sm:mb-2 tracking-wide">
-                  Finale
-                </h3>
-                <p className="font-inter text-sm sm:text-base md:text-lg">
-                  14th - 16th June
-                </p>
-                <p className="font-inter text-xs sm:text-sm text-white/70">
-                  Goa, India
-                </p>
-              </motion.div>
-            </div>
-          </motion.div>
-        </div>
-
-        {/* Enhanced Scroll Indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2 }}
-          className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2"
-        >
-          <motion.div
-            animate={{ y: [0, -10, 0] }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              repeatType: "loop",
-              ease: "easeInOut",
-            }}
-            className="w-6 h-10 border-2 border-white rounded-full flex justify-center"
-          >
+          {/* Dates Section */}
+          <section className="py-16 sm:py-24 md:py-32 px-4 relative overflow-hidden">
             <motion.div
-              animate={{
-                y: [0, 12, 0],
-                backgroundColor: [
-                  "rgba(255,255,255,0.6)",
-                  COLORS.PINK,
-                  "rgba(255,255,255,0.6)",
-                ],
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="w-1 h-2 bg-white rounded-full mt-2"
-            />
-          </motion.div>
-        </motion.div>
-      </section>
-
-      {/* Hackathon Details Section with emojis and excitement */}
-      <section className="py-16 sm:py-24 md:py-32 px-4 relative overflow-hidden">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-          className="absolute inset-0"
-          style={{ backgroundColor: COLORS.BLACK }}
-        />
-
-        {/* Animated background elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
-            className="absolute w-full h-full"
-          >
-            {Array.from({ length: 20 }).map((_, i) => (
-              <motion.div
-                key={i}
-                className="absolute rounded-full"
-                style={{
-                  width: Math.random() * 10 + 4,
-                  height: Math.random() * 10 + 4,
-                  left: `${Math.random() * 100}%`,
-                  top: `${Math.random() * 100}%`,
-                  backgroundColor: COLORS.PINK,
-                  opacity: 0.3,
-                }}
-                animate={{
-                  y: [0, Math.random() * 100 - 50],
-                  opacity: [0.3, 0.6, 0.3],
-                }}
-                transition={{
-                  duration: 5 + Math.random() * 5,
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                  ease: "easeInOut",
-                }}
-              />
-            ))}
-          </motion.div>
-        </div>
-
-        <div className="max-w-5xl mx-auto relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="font-space text-4xl sm:text-5xl md:text-6xl font-bold mb-4 tracking-tight text-white">
-              The <span style={{ color: COLORS.PINK }}>Epic</span> Hackathon
-              Experience 🚀
-            </h2>
-            <motion.div
-              initial={{ width: 0 }}
-              whileInView={{ width: "100px" }}
-              transition={{ duration: 1, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="h-1 mx-auto mb-8"
-              style={{ backgroundColor: COLORS.PINK }}
-            />
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="bg-white/10 p-6 sm:p-8 md:p-10 mb-12 border-l-4 rounded-r-lg"
-            style={{ borderColor: COLORS.PINK }}
-          >
-            <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
+              transition={{ duration: 1 }}
               viewport={{ once: true }}
-              className="font-inter text-base sm:text-lg md:text-xl text-white leading-relaxed"
-            >
-              <span className="text-2xl">💥</span> Polkadot AssetHub Hackathon
-              is{" "}
-              <span className="font-bold" style={{ color: COLORS.PINK }}>
-                first of its kind
-              </span>{" "}
-              hybrid hackathon scheduled on the occasion of the upcoming Hub
-              launch which lower the entry barrier and opens up the
-              opportunities for solidity developers to enter the Polkadot
-              ecosystem more natively than ever before!
-            </motion.p>
-          </motion.div>
+              className="absolute inset-0 bg-black"
+            />
 
+            <div className="max-w-7xl mx-auto relative z-10">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+                viewport={{ once: true }}
+                className="text-center mb-12 sm:mb-16 md:mb-20"
+              >
+                <h2 className="font-space text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 tracking-tight text-white">
+                  Important Dates 📅
+                </h2>
+                <motion.div
+                  initial={{ width: 0 }}
+                  whileInView={{ width: "80px" }}
+                  transition={{ duration: 1, delay: 0.3 }}
+                  viewport={{ once: true }}
+                  className="h-1 mx-auto mb-6 sm:mb-8"
+                  style={{ backgroundColor: COLORS.PINK }}
+                />
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="space-y-4 sm:space-y-6"
+              >
+                <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 md:gap-8">
+                  <motion.div
+                    initial={{ opacity: 0, x: -30 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, delay: 1.8 }}
+                    whileHover={{
+                      scale: 1.05,
+                      boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1)",
+                    }}
+                    whileTap={{ scale: 0.98 }}
+                    className="w-full sm:w-auto p-4 sm:p-6 rounded-none border-2 border-white"
+                    style={{
+                      backgroundColor: COLORS.PINK,
+                      color: COLORS.WHITE,
+                      borderColor: COLORS.BLACK,
+                    }}
+                  >
+                    <h3 className="font-space text-base sm:text-lg md:text-xl font-bold mb-1 sm:mb-2 tracking-wide">
+                      Eliminator Round
+                    </h3>
+                    <p className="font-inter text-sm sm:text-base md:text-lg">
+                      30th May - 6th June
+                    </p>
+                    <p className="font-inter text-xs sm:text-sm text-white/80">
+                      Online
+                    </p>
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, x: 30 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, delay: 1.9 }}
+                    whileHover={{
+                      scale: 1.05,
+                      boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1)",
+                    }}
+                    whileTap={{ scale: 0.98 }}
+                    className="w-full sm:w-auto bg-transparent text-white p-4 sm:p-6 rounded-none border-2"
+                    style={{
+                      backgroundColor: "transparent",
+                      borderColor: COLORS.PINK,
+                      color: COLORS.WHITE,
+                    }}
+                  >
+                    <h3 className="font-space text-base sm:text-lg md:text-xl font-bold mb-1 sm:mb-2 tracking-wide">
+                      Finale
+                    </h3>
+                    <p className="font-inter text-sm sm:text-base md:text-lg">
+                      14th - 16th June
+                    </p>
+                    <p className="font-inter text-xs sm:text-sm text-white/70">
+                      Goa, India
+                    </p>
+                  </motion.div>
+                </div>
+              </motion.div>
+            </div>
+          </section>
+
+          {/* Hackathon Details Section with emojis and excitement */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -574,14 +489,64 @@ export default function Home() {
                     border: `2px solid ${COLORS.BLACK}`,
                   }}
                 />
+                <Link
+                  href="https://t.me/StudentsCollective"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium transition-all hover:scale-105"
+                  style={{
+                    backgroundColor: "#0088cc", // Telegram blue
+                    color: COLORS.WHITE,
+                    border: `2px solid ${COLORS.BLACK}`,
+                  }}
+                >
+                  <span>💬</span>
+                  <span>Join Students Collective</span>
+                </Link>
               </div>
 
               <p className="font-inter text-sm text-white/70 mt-4">
-                Registrations Open till 28th May
+                Registrations Open till 29th May
               </p>
             </div>
           </motion.div>
         </div>
+
+        {/* Enhanced Scroll Indicator */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 2 }}
+          className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2"
+        >
+          <motion.div
+            animate={{ y: [0, -10, 0] }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              repeatType: "loop",
+              ease: "easeInOut",
+            }}
+            className="w-6 h-10 border-2 border-white rounded-full flex justify-center"
+          >
+            <motion.div
+              animate={{
+                y: [0, 12, 0],
+                backgroundColor: [
+                  "rgba(255,255,255,0.6)",
+                  COLORS.PINK,
+                  "rgba(255,255,255,0.6)",
+                ],
+              }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className="w-1 h-2 bg-white rounded-full mt-2"
+            />
+          </motion.div>
+        </motion.div>
       </section>
 
       {/* Tracks Section */}
@@ -720,8 +685,8 @@ export default function Home() {
                   {[
                     "Smart Contracts",
                     "AI",
-                    "AI Agents",
                     "DePIN",
+                    "AI Agents",
                     "Tooling",
                   ].map((category, idx) => (
                     <motion.span
@@ -1157,6 +1122,336 @@ export default function Home() {
                     announcement
                   </p>
                 </motion.div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Prehackathon Meetups Section */}
+      <section className="py-16 sm:py-24 md:py-32 px-4 bg-white text-black relative overflow-hidden">
+        {/* Background animation elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <motion.div
+            initial={{ x: "-100%" }}
+            whileInView={{ x: "0%" }}
+            transition={{ duration: 1.5 }}
+            viewport={{ once: true }}
+            className="absolute top-0 left-0 w-full h-1"
+            style={{ backgroundColor: COLORS.PINK }}
+          />
+          <motion.div
+            initial={{ x: "100%" }}
+            whileInView={{ x: "0%" }}
+            transition={{ duration: 1.5 }}
+            viewport={{ once: true }}
+            className="absolute bottom-0 left-0 w-full h-1"
+            style={{ backgroundColor: COLORS.PINK }}
+          />
+        </div>
+
+        <div className="max-w-5xl mx-auto relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+            viewport={{ once: true }}
+            className="text-center mb-12 sm:mb-16 md:mb-20"
+          >
+            <h2 className="font-space text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 tracking-tight">
+              Prehackathon Meetups 🎯
+            </h2>
+            <motion.div
+              initial={{ width: 0 }}
+              whileInView={{ width: "80px" }}
+              transition={{ duration: 1, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="h-1 bg-black mx-auto mb-4 sm:mb-8"
+              style={{ backgroundColor: COLORS.PINK }}
+            />
+            <p className="font-inter text-base sm:text-lg md:text-xl text-black/70 font-normal tracking-wide">
+              Join us for exciting meetups before the hackathon
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="max-w-3xl mx-auto"
+          >
+            <motion.div
+              whileHover={{
+                scale: 1.02,
+                borderColor: COLORS.PINK,
+                transition: { duration: 0.2 },
+              }}
+              className="bg-transparent p-6 sm:p-8 border-2 border-black relative group"
+            >
+              <motion.div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition-opacity duration-300" />
+
+              <div className="flex flex-col sm:flex-row gap-6 items-start">
+                {/* Date Box */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                  className="flex-shrink-0 w-24 h-24 sm:w-32 sm:h-32 bg-black text-white flex flex-col items-center justify-center p-2"
+                >
+                  <span className="text-sm sm:text-base font-bold">MAY</span>
+                  <span
+                    className="text-3xl sm:text-4xl font-bold"
+                    style={{ color: COLORS.PINK }}
+                  >
+                    25
+                  </span>
+                  <span className="text-sm sm:text-base">Sunday</span>
+                </motion.div>
+
+                {/* Event Details */}
+                <div className="flex-grow">
+                  <h3 className="font-space text-xl sm:text-2xl font-bold mb-2">
+                    Pre-AssetHub Hackathon Meetup: Mumbai Edition
+                  </h3>
+                  <p className="font-inter text-sm sm:text-base text-black/70 mb-4">
+                    Polkadot Events in India
+                  </p>
+                  <div className="flex items-center gap-2 text-sm sm:text-base text-black/80">
+                    <span>🕒</span>
+                    <span>17:00 - 21:00</span>
+                  </div>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
+                    viewport={{ once: true }}
+                    className="mt-4"
+                  >
+                    <Link
+                      href="#"
+                      className="inline-block px-4 py-2 text-sm font-medium"
+                      style={{
+                        backgroundColor: COLORS.PINK,
+                        color: COLORS.WHITE,
+                        border: `2px solid ${COLORS.BLACK}`,
+                      }}
+                    >
+                      Register for Meetup
+                    </Link>
+                  </motion.div>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Community Partners Section */}
+      <section className="py-12 sm:py-16 bg-black text-white relative overflow-hidden">
+        <div className="max-w-5xl mx-auto relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-8"
+          >
+            <h3 className="font-space text-xl sm:text-2xl font-bold mb-6 tracking-wide text-white">
+              Community Partners
+            </h3>
+            <motion.div
+              initial={{ width: 0 }}
+              whileInView={{ width: "60px" }}
+              transition={{ duration: 1, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="h-1 mx-auto mb-8"
+              style={{ backgroundColor: COLORS.PINK }}
+            />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="flex justify-center items-center"
+          >
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+              className="p-4"
+            >
+              <img
+                src="/web3mumbai.png"
+                alt="Web3 Mumbai"
+                className="h-16 sm:h-20 object-contain brightness-0 invert"
+              />
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Mentors & Judges Section */}
+      <section className="py-16 sm:py-24 md:py-32 px-4 bg-white text-black relative overflow-hidden">
+        <div className="max-w-7xl mx-auto relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+            viewport={{ once: true }}
+            className="text-center mb-12 sm:mb-16 md:mb-20"
+          >
+            <h2 className="font-space text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 tracking-tight">
+              Mentors & Judges 👨‍🏫
+            </h2>
+            <motion.div
+              initial={{ width: 0 }}
+              whileInView={{ width: "80px" }}
+              transition={{ duration: 1, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="h-1 bg-black mx-auto mb-4 sm:mb-8"
+              style={{ backgroundColor: COLORS.PINK }}
+            />
+            <p className="font-inter text-base sm:text-lg md:text-xl text-black/70 font-normal tracking-wide">
+              Meet the experts guiding your journey
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
+            {/* Abhiraj Mengade */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="group"
+            >
+              <div className="relative overflow-hidden rounded-lg bg-black/5 aspect-[3/4]">
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                  className="absolute inset-0"
+                >
+                  <img
+                    src="/abhiraj.jpeg"
+                    alt="Abhiraj Mengade"
+                    className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </motion.div>
+                <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                  <h3 className="font-space text-xl font-bold text-white mb-2">
+                    Abhiraj Mengade
+                  </h3>
+                  <p className="font-inter text-sm text-white/80 mb-4">Judge</p>
+                  <Link
+                    href="https://www.linkedin.com/in/abhiraj-mengade/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm text-white hover:text-pink-400 transition-colors"
+                  >
+                    <span>LinkedIn</span>
+                    <svg
+                      className="w-4 h-4"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Parth Mittal */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="group"
+            >
+              <div className="relative overflow-hidden rounded-lg bg-black/5 aspect-[3/4]">
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                  className="absolute inset-0"
+                >
+                  <img
+                    src="/parth.jpeg"
+                    alt="Parth Mittal"
+                    className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </motion.div>
+                <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                  <h3 className="font-space text-xl font-bold text-white mb-2">
+                    Parth Mittal
+                  </h3>
+                  <p className="font-inter text-sm text-white/80 mb-4">Judge</p>
+                  <Link
+                    href="https://www.linkedin.com/in/mittal-parth"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm text-white hover:text-pink-400 transition-colors"
+                  >
+                    <span>LinkedIn</span>
+                    <svg
+                      className="w-4 h-4"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Haoyang Li */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              viewport={{ once: true }}
+              className="group"
+            >
+              <div className="relative overflow-hidden rounded-lg bg-black/5 aspect-[3/4]">
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                  className="absolute inset-0"
+                >
+                  <img
+                    src="/haoyang.jpeg"
+                    alt="Haoyang Li"
+                    className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </motion.div>
+                <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                  <h3 className="font-space text-xl font-bold text-white mb-2">
+                    Haoyang Li
+                  </h3>
+                  <p className="font-inter text-sm text-white/80 mb-4">Judge</p>
+                  <Link
+                    href="https://www.linkedin.com/in/haoyang-li-eu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm text-white hover:text-pink-400 transition-colors"
+                  >
+                    <span>LinkedIn</span>
+                    <svg
+                      className="w-4 h-4"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
+                  </Link>
+                </div>
               </div>
             </motion.div>
           </div>
