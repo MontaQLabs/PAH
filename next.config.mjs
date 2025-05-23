@@ -9,7 +9,6 @@ const nextConfig = {
   // Other experimental features
   experimental: {
     // Set forceSwcTransforms for performance
-    forceSwcTransforms: true,
   },
 };
 

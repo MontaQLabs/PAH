@@ -1159,7 +1159,7 @@ export default function Home() {
             className="text-center mb-12 sm:mb-16 md:mb-20"
           >
             <h2 className="font-space text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 tracking-tight">
-              Prehackathon Meetups 🎯
+              Pre-hackathon Meetups 🎯
             </h2>
             <motion.div
               initial={{ width: 0 }}
@@ -1258,9 +1258,10 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-8"
           >
-            <h3 className="font-space text-xl sm:text-2xl font-bold mb-6 tracking-wide text-white">
+            <h2 className="font-space text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 tracking-tight">
               Community Partners
-            </h3>
+            </h2>
+
             <motion.div
               initial={{ width: 0 }}
               whileInView={{ width: "60px" }}
@@ -1311,6 +1312,44 @@ export default function Home() {
                 <img
                   src="/agents.png"
                   alt="Agent's Clan"
+                  className="h-24 sm:h-32 object-contain"
+                />
+              </Link>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+              className="p-4"
+            >
+              <Link
+                href="https://x.com/hyderabaddao"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <img
+                  src="/hyderabad_dao.jpg"
+                  alt="Hyderabad DAO"
+                  className="h-24 sm:h-32 object-contain"
+                />
+              </Link>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+              className="p-4"
+            >
+              <Link
+                href="https://x.com/lucknow_dao"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <img
+                  src="/lucknow_dao.jpg"
+                  alt="Lucknow DAO"
                   className="h-24 sm:h-32 object-contain"
                 />
               </Link>
