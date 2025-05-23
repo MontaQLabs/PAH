@@ -53,7 +53,7 @@ const RegisterButton = ({ className = "", style = {} }) => (
         transition: { duration: 0.3 },
       }}
       whileTap={{ scale: 0.95 }}
-      className={`font-inter font-bold py-3 sm:py-4 px-8 sm:px-12 md:px-16 rounded-none text-lg sm:text-xl transition-all shadow-lg ${className}`}
+      className={`font-inter font-bold py-3 sm:py-4 px-8 sm:px-12 md:px-16 rounded-none text-lg sm:text-xl transition-all shadow-lg ${className} cursor-pointer`}
       style={{
         backgroundColor: COLORS.PINK,
         color: COLORS.WHITE,
@@ -1130,7 +1130,6 @@ export default function Home() {
 
       {/* Prehackathon Meetups Section */}
       <section className="py-16 sm:py-24 md:py-32 px-4 bg-white text-black relative overflow-hidden">
-        {/* Background animation elements */}
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
             initial={{ x: "-100%" }}
@@ -1189,10 +1188,8 @@ export default function Home() {
               }}
               className="bg-transparent p-6 sm:p-8 border-2 border-black relative group"
             >
-              <motion.div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition-opacity duration-300" />
-
-              <div className="flex flex-col sm:flex-row gap-6 items-start">
-                {/* Date Box */}
+              <motion.div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition-opacity duration-300 pointer-events-none" />
+              <div className="flex flex-col sm:flex-row gap-6 items-start relative z-10">
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
@@ -1210,7 +1207,6 @@ export default function Home() {
                   <span className="text-sm sm:text-base">Sunday</span>
                 </motion.div>
 
-                {/* Event Details */}
                 <div className="flex-grow">
                   <h3 className="font-space text-xl sm:text-2xl font-bold mb-2">
                     Pre-AssetHub Hackathon Meetup: Mumbai Edition
@@ -1229,17 +1225,19 @@ export default function Home() {
                     viewport={{ once: true }}
                     className="mt-4"
                   >
-                    <Link
+                    <a
                       href="https://lu.ma/0r3qbfvz"
-                      className="inline-block px-4 py-2 text-sm font-medium"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block px-4 py-2 text-sm font-medium hover:opacity-90 transition-opacity"
                       style={{
                         backgroundColor: COLORS.PINK,
                         color: COLORS.WHITE,
-                        border: `2px solid ${COLORS.BLACK}`,
+                        border: `2px solid ${COLORS.BLACK}`, // border: `2px solid ${COLORS.BLACK}`, // Border might be redundant if bg is solid, or adjust as needed
                       }}
                     >
                       Register for Meetup
-                    </Link>
+                    </a>
                   </motion.div>
                 </div>
               </div>
