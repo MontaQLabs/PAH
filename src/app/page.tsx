@@ -1230,7 +1230,7 @@ export default function Home() {
                     className="mt-4"
                   >
                     <Link
-                      href="#"
+                      href="https://lu.ma/0r3qbfvz"
                       className="inline-block px-4 py-2 text-sm font-medium"
                       style={{
                         backgroundColor: COLORS.PINK,
@@ -1276,18 +1276,44 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             viewport={{ once: true }}
-            className="flex justify-center items-center"
+            className="flex justify-center items-center gap-8 sm:gap-12"
           >
             <motion.div
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
               className="p-4"
             >
-              <img
-                src="/web3mumbai.png"
-                alt="Web3 Mumbai"
-                className="h-24 sm:h-32 object-contain brightness-0 invert"
-              />
+              <Link
+                href="https://x.com/weareWeb3Mumbai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <img
+                  src="/web3mumbai.png"
+                  alt="Web3 Mumbai"
+                  className="h-24 sm:h-32 object-contain"
+                />
+              </Link>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+              className="p-4"
+            >
+              <Link
+                href="https://x.com/agentsclan2"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <img
+                  src="/agents.png"
+                  alt="Agent's Clan"
+                  className="h-24 sm:h-32 object-contain"
+                />
+              </Link>
             </motion.div>
           </motion.div>
         </div>
