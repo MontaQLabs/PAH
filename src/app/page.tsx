@@ -1319,6 +1319,25 @@ export default function Home() {
               className="p-4"
             >
               <Link
+                href="https://x.com/Dot_Delhi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <img
+                  src="/Polkadot_Delhi.png"
+                  alt="Polkadot Delhi"
+                  className="h-24 sm:h-32 object-contain"
+                />
+              </Link>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+              className="p-4"
+            >
+              <Link
                 href="https://x.com/hyderabaddao"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -1346,6 +1365,25 @@ export default function Home() {
                 <img
                   src="/lucknow_dao.jpg"
                   alt="Lucknow DAO"
+                  className="h-24 sm:h-32 object-contain"
+                />
+              </Link>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+              className="p-4"
+            >
+              <Link
+                href="https://x.com/99_thFloor"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <img
+                  src="/99th_Floor.png"
+                  alt="99th Floor"
                   className="h-24 sm:h-32 object-contain"
                 />
               </Link>
@@ -1380,14 +1418,20 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
+          <div
+            className="flex flex-wrap justify-center items-stretch 
+                       gap-y-8 gap-x-6 
+                       sm:gap-x-8 
+                       md:gap-x-8 md:gap-y-10 
+                       lg:flex-nowrap lg:gap-x-10 lg:gap-y-0"
+          >
             {/* Abhiraj Mengade */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className="group"
+              className="group w-56"
             >
               <div className="relative overflow-hidden rounded-lg bg-black/5 aspect-square w-40 h-40 mx-auto">
                 <motion.div
@@ -1426,13 +1470,58 @@ export default function Home() {
               </div>
             </motion.div>
 
-            {/* Parth Mittal */}
+            {/* Shankar Warang */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
-              className="group"
+              className="group w-56"
+            >
+              <div className="relative overflow-hidden rounded-lg bg-black/5 aspect-square w-40 h-40 mx-auto">
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                  className="absolute inset-0"
+                >
+                  <img
+                    src="/Shankar.png"
+                    alt="Shankar Warang"
+                    className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </motion.div>
+              </div>
+              <div className="text-center mt-4">
+                <h3 className="font-space text-lg font-bold text-black mb-2">
+                  Shankar Warang
+                </h3>
+                <p className="font-inter text-sm text-black/80 mb-2">Judge</p>
+                <Link
+                  href="https://www.linkedin.com/in/shankar-warang/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm text-black hover:text-pink-400 transition-colors"
+                >
+                  <span>LinkedIn</span>
+                  <svg
+                    className="w-4 h-4"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                  </svg>
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* Parth Mittal */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              viewport={{ once: true }}
+              className="group w-56"
             >
               <div className="relative overflow-hidden rounded-lg bg-black/5 aspect-square w-40 h-40 mx-auto">
                 <motion.div
@@ -1475,9 +1564,9 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
               viewport={{ once: true }}
-              className="group"
+              className="group w-56"
             >
               <div className="relative overflow-hidden rounded-lg bg-black/5 aspect-square w-40 h-40 mx-auto">
                 <motion.div
