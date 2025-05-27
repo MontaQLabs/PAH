@@ -1420,14 +1420,20 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
+          <div
+            className="flex flex-wrap justify-center items-stretch 
+                       gap-y-8 gap-x-6 
+                       sm:gap-x-8 
+                       md:gap-x-8 md:gap-y-10 
+                       lg:flex-nowrap lg:gap-x-10 lg:gap-y-0"
+          >
             {/* Abhiraj Mengade */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className="group"
+              className="group w-56"
             >
               <div className="relative overflow-hidden rounded-lg bg-black/5 aspect-square w-40 h-40 mx-auto">
                 <motion.div
@@ -1470,9 +1476,9 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
-              className="group"
+              className="group w-56"
             >
               <div className="relative overflow-hidden rounded-lg bg-black/5 aspect-square w-40 h-40 mx-auto">
                 <motion.div
@@ -1515,9 +1521,9 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
               viewport={{ once: true }}
-              className="group"
+              className="group w-56"
             >
               <div className="relative overflow-hidden rounded-lg bg-black/5 aspect-square w-40 h-40 mx-auto">
                 <motion.div
@@ -1560,9 +1566,9 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
               viewport={{ once: true }}
-              className="group"
+              className="group w-56"
             >
               <div className="relative overflow-hidden rounded-lg bg-black/5 aspect-square w-40 h-40 mx-auto">
                 <motion.div
