@@ -503,6 +503,20 @@ export default function Home() {
                   <span>💬</span>
                   <span>Join Students Collective</span>
                 </Link>
+                <Link
+                  href="https://lu.ma/PolkaVM"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium transition-all hover:scale-105"
+                  style={{
+                    backgroundColor: COLORS.VIOLET,
+                    color: COLORS.WHITE,
+                    border: `2px solid ${COLORS.BLACK}`,
+                  }}
+                >
+                  <span>📅</span>
+                  <span>Hackathon Calendar</span>
+                </Link>
               </div>
 
               <p className="font-inter text-sm text-white/70 mt-4">
@@ -621,9 +635,31 @@ export default function Home() {
               className="h-1 bg-black mx-auto mb-6 sm:mb-8"
               style={{ backgroundColor: COLORS.PINK }}
             />
-            <p className="font-inter text-base sm:text-lg md:text-xl text-black/70 font-normal tracking-wide">
+            <p className="font-inter text-base sm:text-lg md:text-xl text-black/70 font-normal tracking-wide mb-4">
               Choose your path to innovation
             </p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="mb-8"
+            >
+              <Link
+                href="https://hackmd.io/36hLJMfPRGWZkXXKD8IRvQ"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 text-base font-medium transition-all hover:scale-105"
+                style={{
+                  backgroundColor: COLORS.BLACK,
+                  color: COLORS.WHITE,
+                  border: `2px solid ${COLORS.PINK}`,
+                }}
+              >
+                <span>📚</span>
+                <span>Hackathon Bible - Your Complete Resource Guide</span>
+              </Link>
+            </motion.div>
           </motion.div>
 
           <motion.div
@@ -717,10 +753,11 @@ export default function Home() {
                     Evaluation Criteria
                   </h4>
                   <p className="font-inter text-sm sm:text-base text-black/80 mb-4">
-                    Projects will be evaluated based on using Polkadot AssetHub and PolkaVM effectively. Solutions that
-                    demonstrate innovative applications, technical excellence, and creative use of
-                    Solidity within current constraints and practical utility within the Polkadot ecosystem will be
-                    highly valued.
+                    Projects will be evaluated based on using Polkadot AssetHub
+                    and PolkaVM effectively. Solutions that demonstrate
+                    innovative applications, technical excellence, and creative
+                    use of Solidity within current constraints and practical
+                    utility within the Polkadot ecosystem will be highly valued.
                   </p>
                   <ul className="space-y-2 text-left">
                     <li className="flex items-start gap-2">
@@ -732,13 +769,15 @@ export default function Home() {
                     <li className="flex items-start gap-2">
                       <span>•</span>
                       <span className="font-inter text-sm sm:text-base text-black/80">
-                        Innovative and self-contained logic using Solidity smart contracts
+                        Innovative and self-contained logic using Solidity smart
+                        contracts
                       </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span>•</span>
                       <span className="font-inter text-sm sm:text-base text-black/80">
-                        Practical value, relevance and potential impact on the Polkadot ecosystem
+                        Practical value, relevance and potential impact on the
+                        Polkadot ecosystem
                       </span>
                     </li>
                   </ul>
