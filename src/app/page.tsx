@@ -7,6 +7,28 @@ import { Unbounded } from "next/font/google";
 import Link from "next/link";
 import CommunityPartner from "@/components/CommunityPartner";
 
+// Add TypeScript declarations for window.ethereum
+declare global {
+  interface Window {
+    ethereum?: {
+      request: (args: {
+        method: string;
+        params: Array<{
+          chainId: string;
+          chainName: string;
+          nativeCurrency: {
+            name: string;
+            symbol: string;
+            decimals: number;
+          };
+          rpcUrls: string[];
+          blockExplorerUrls: string[];
+        }>;
+      }) => Promise<unknown>;
+    };
+  }
+}
+
 // Font configuration
 const unbounded = Unbounded({
   subsets: ["latin"],
@@ -725,6 +747,7 @@ export default function Home() {
                     "DePIN",
                     "AI Agents",
                     "Tooling",
+                    "Open Track",
                   ].map((category, idx) => (
                     <motion.span
                       key={category}
@@ -782,6 +805,50 @@ export default function Home() {
                       </span>
                     </li>
                   </ul>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                  viewport={{ once: true }}
+                  className="mt-4"
+                >
+                  <button
+                    onClick={() => {
+                      if (window.ethereum) {
+                        window.ethereum.request({
+                          method: "wallet_addEthereumChain",
+                          params: [
+                            {
+                              chainId: "0x1919191", // 420420421 in hex
+                              chainName: "PassetHub Testnet",
+                              nativeCurrency: {
+                                name: "PAS",
+                                symbol: "PAS",
+                                decimals: 18,
+                              },
+                              rpcUrls: [
+                                "https://testnet-passet-hub-eth-rpc.polkadot.io/",
+                              ],
+                              blockExplorerUrls: [
+                                "https://blockscout-passet-hub.parity-testnet.parity.io/",
+                              ],
+                            },
+                          ],
+                        });
+                      }
+                    }}
+                    className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium transition-all hover:scale-105"
+                    style={{
+                      backgroundColor: COLORS.VIOLET,
+                      color: COLORS.WHITE,
+                      border: `2px solid ${COLORS.BLACK}`,
+                    }}
+                  >
+                    <span>🦊</span>
+                    <span>Add PassetHub to MetaMask</span>
+                  </button>
                 </motion.div>
               </div>
             </motion.div>
@@ -1196,7 +1263,7 @@ export default function Home() {
             className="text-center mb-12 sm:mb-16 md:mb-20"
           >
             <h2 className="font-space text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 tracking-tight">
-              Pre-hackathon Meetups 🎯
+              Road to AssetHub Hackathon Meetups 🎯
             </h2>
             <motion.div
               initial={{ width: 0 }}
@@ -1216,70 +1283,324 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             viewport={{ once: true }}
-            className="max-w-3xl mx-auto"
+            className="mx-auto max-w-4xl"
           >
-            <motion.div
-              whileHover={{
-                scale: 1.02,
-                borderColor: COLORS.PINK,
-                transition: { duration: 0.2 },
-              }}
-              className="bg-transparent p-6 sm:p-8 border-2 border-black relative group"
-            >
-              <motion.div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition-opacity duration-300 pointer-events-none" />
-              <div className="flex flex-col sm:flex-row gap-6 items-start relative z-10">
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5 }}
-                  viewport={{ once: true }}
-                  className="flex-shrink-0 w-24 h-24 sm:w-32 sm:h-32 bg-black text-white flex flex-col items-center justify-center p-2"
-                >
-                  <span className="text-sm sm:text-base font-bold">MAY</span>
-                  <span
-                    className="text-3xl sm:text-4xl font-bold"
-                    style={{ color: COLORS.PINK }}
-                  >
-                    25
-                  </span>
-                  <span className="text-sm sm:text-base">Sunday</span>
-                </motion.div>
-
-                <div className="flex-grow">
-                  <h3 className="font-space text-xl sm:text-2xl font-bold mb-2">
-                    Pre-AssetHub Hackathon Meetup: Mumbai Edition
-                  </h3>
-                  <p className="font-inter text-sm sm:text-base text-black/70 mb-4">
-                    Polkadot Events in India
-                  </p>
-                  <div className="flex items-center gap-2 text-sm sm:text-base text-black/80">
-                    <span>🕒</span>
-                    <span>17:00 - 21:00</span>
-                  </div>
+            <div className="grid grid-cols-1 gap-6">
+              {/* Mumbai Meetup */}
+              <motion.div
+                whileHover={{
+                  scale: 1.02,
+                  borderColor: COLORS.PINK,
+                  transition: { duration: 0.2 },
+                }}
+                className="bg-transparent p-6 sm:p-8 border-2 border-black relative group"
+              >
+                <motion.div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition-opacity duration-300 pointer-events-none" />
+                <div className="flex flex-col sm:flex-row gap-6 items-start relative z-10">
                   <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 0.5, delay: 0.5 }}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5 }}
                     viewport={{ once: true }}
-                    className="mt-4"
+                    className="flex-shrink-0 w-24 h-24 sm:w-32 sm:h-32 bg-black text-white flex flex-col items-center justify-center p-2"
                   >
-                    <a
-                      href="https://lu.ma/0r3qbfvz"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block px-4 py-2 text-sm font-medium hover:opacity-90 transition-opacity"
-                      style={{
-                        backgroundColor: COLORS.PINK,
-                        color: COLORS.WHITE,
-                        border: `2px solid ${COLORS.BLACK}`, // border: `2px solid ${COLORS.BLACK}`, // Border might be redundant if bg is solid, or adjust as needed
-                      }}
+                    <span className="text-sm sm:text-base font-bold">MAY</span>
+                    <span
+                      className="text-3xl sm:text-4xl font-bold"
+                      style={{ color: COLORS.PINK }}
                     >
-                      Register for Meetup
-                    </a>
+                      31
+                    </span>
+                    <span className="text-sm sm:text-base">Saturday</span>
                   </motion.div>
+                  <div className="flex-grow">
+                    <h3 className="font-space text-xl sm:text-2xl font-bold mb-2">
+                      Road to AssetHub Hackathon: Mumbai Meetup
+                    </h3>
+                    <p className="font-inter text-sm sm:text-base text-black/70 mb-4">
+                      Polkadot Events in India
+                    </p>
+                    <div className="flex items-center gap-2 text-sm sm:text-base text-black/80">
+                      <span>🕒</span>
+                      <span>12:00 - 15:00</span>
+                    </div>
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      transition={{ duration: 0.5, delay: 0.5 }}
+                      viewport={{ once: true }}
+                      className="mt-4"
+                    >
+                      <a
+                        href="https://lu.ma/0r3qbfvz"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block px-4 py-2 text-sm font-medium hover:opacity-90 transition-opacity"
+                        style={{
+                          backgroundColor: COLORS.PINK,
+                          color: COLORS.WHITE,
+                          border: `2px solid ${COLORS.BLACK}`,
+                        }}
+                      >
+                        Register for Meetup
+                      </a>
+                    </motion.div>
+                  </div>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+
+              {/* Bangalore Meetup */}
+              <motion.div
+                whileHover={{
+                  scale: 1.02,
+                  borderColor: COLORS.PINK,
+                  transition: { duration: 0.2 },
+                }}
+                className="bg-transparent p-6 sm:p-8 border-2 border-black relative group"
+              >
+                <motion.div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition-opacity duration-300 pointer-events-none" />
+                <div className="flex flex-col sm:flex-row gap-6 items-start relative z-10">
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: true }}
+                    className="flex-shrink-0 w-24 h-24 sm:w-32 sm:h-32 bg-black text-white flex flex-col items-center justify-center p-2"
+                  >
+                    <span className="text-sm sm:text-base font-bold">MAY</span>
+                    <span
+                      className="text-3xl sm:text-4xl font-bold"
+                      style={{ color: COLORS.PINK }}
+                    >
+                      31
+                    </span>
+                    <span className="text-sm sm:text-base">Saturday</span>
+                  </motion.div>
+                  <div className="flex-grow">
+                    <h3 className="font-space text-xl sm:text-2xl font-bold mb-2">
+                      Road to AssetHub Hackathon: Bangalore Meetup
+                    </h3>
+                    <p className="font-inter text-sm sm:text-base text-black/70 mb-4">
+                      Polkadot Events in India
+                    </p>
+                    <div className="flex items-center gap-2 text-sm sm:text-base text-black/80">
+                      <span>🕒</span>
+                      <span>17:00 - 19:00</span>
+                    </div>
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      transition={{ duration: 0.5, delay: 0.5 }}
+                      viewport={{ once: true }}
+                      className="mt-4"
+                    >
+                      <a
+                        href="https://lu.ma/79a7flh8"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block px-4 py-2 text-sm font-medium hover:opacity-90 transition-opacity"
+                        style={{
+                          backgroundColor: COLORS.PINK,
+                          color: COLORS.WHITE,
+                          border: `2px solid ${COLORS.BLACK}`,
+                        }}
+                      >
+                        Register for Meetup
+                      </a>
+                    </motion.div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Delhi Meetup */}
+              <motion.div
+                whileHover={{
+                  scale: 1.02,
+                  borderColor: COLORS.PINK,
+                  transition: { duration: 0.2 },
+                }}
+                className="bg-transparent p-6 sm:p-8 border-2 border-black relative group"
+              >
+                <motion.div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition-opacity duration-300 pointer-events-none" />
+                <div className="flex flex-col sm:flex-row gap-6 items-start relative z-10">
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: true }}
+                    className="flex-shrink-0 w-24 h-24 sm:w-32 sm:h-32 bg-black text-white flex flex-col items-center justify-center p-2"
+                  >
+                    <span className="text-sm sm:text-base font-bold">MAY</span>
+                    <span
+                      className="text-3xl sm:text-4xl font-bold"
+                      style={{ color: COLORS.PINK }}
+                    >
+                      31
+                    </span>
+                    <span className="text-sm sm:text-base">Saturday</span>
+                  </motion.div>
+                  <div className="flex-grow">
+                    <h3 className="font-space text-xl sm:text-2xl font-bold mb-2">
+                      Road to AssetHub Hackathon: Delhi Meetup
+                    </h3>
+                    <p className="font-inter text-sm sm:text-base text-black/70 mb-4">
+                      Polkadot Events in India
+                    </p>
+                    <div className="flex items-center gap-2 text-sm sm:text-base text-black/80">
+                      <span>🕒</span>
+                      <span>17:00 - 18:00</span>
+                    </div>
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      transition={{ duration: 0.5, delay: 0.5 }}
+                      viewport={{ once: true }}
+                      className="mt-4"
+                    >
+                      <a
+                        href="https://lu.ma/w88g6l1j"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block px-4 py-2 text-sm font-medium hover:opacity-90 transition-opacity"
+                        style={{
+                          backgroundColor: COLORS.PINK,
+                          color: COLORS.WHITE,
+                          border: `2px solid ${COLORS.BLACK}`,
+                        }}
+                      >
+                        Register for Meetup
+                      </a>
+                    </motion.div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Hyderabad Meetup */}
+              <motion.div
+                whileHover={{
+                  scale: 1.02,
+                  borderColor: COLORS.PINK,
+                  transition: { duration: 0.2 },
+                }}
+                className="bg-transparent p-6 sm:p-8 border-2 border-black relative group"
+              >
+                <motion.div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition-opacity duration-300 pointer-events-none" />
+                <div className="flex flex-col sm:flex-row gap-6 items-start relative z-10">
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: true }}
+                    className="flex-shrink-0 w-24 h-24 sm:w-32 sm:h-32 bg-black text-white flex flex-col items-center justify-center p-2"
+                  >
+                    <span className="text-sm sm:text-base font-bold">JUN</span>
+                    <span
+                      className="text-3xl sm:text-4xl font-bold"
+                      style={{ color: COLORS.PINK }}
+                    >
+                      1
+                    </span>
+                    <span className="text-sm sm:text-base">Sunday</span>
+                  </motion.div>
+                  <div className="flex-grow">
+                    <h3 className="font-space text-xl sm:text-2xl font-bold mb-2">
+                      Road to AssetHub Hackathon: Hyderabad Meetup
+                    </h3>
+                    <p className="font-inter text-sm sm:text-base text-black/70 mb-4">
+                      Polkadot Events in India
+                    </p>
+                    <div className="flex items-center gap-2 text-sm sm:text-base text-black/80">
+                      <span>🕒</span>
+                      <span>18:00 - 22:00</span>
+                    </div>
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      transition={{ duration: 0.5, delay: 0.5 }}
+                      viewport={{ once: true }}
+                      className="mt-4"
+                    >
+                      <a
+                        href="https://lu.ma/7m7vn26g"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block px-4 py-2 text-sm font-medium hover:opacity-90 transition-opacity"
+                        style={{
+                          backgroundColor: COLORS.PINK,
+                          color: COLORS.WHITE,
+                          border: `2px solid ${COLORS.BLACK}`,
+                        }}
+                      >
+                        Register for Meetup
+                      </a>
+                    </motion.div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Lucknow Meetup */}
+              <motion.div
+                whileHover={{
+                  scale: 1.02,
+                  borderColor: COLORS.PINK,
+                  transition: { duration: 0.2 },
+                }}
+                className="bg-transparent p-6 sm:p-8 border-2 border-black relative group"
+              >
+                <motion.div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition-opacity duration-300 pointer-events-none" />
+                <div className="flex flex-col sm:flex-row gap-6 items-start relative z-10">
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: true }}
+                    className="flex-shrink-0 w-24 h-24 sm:w-32 sm:h-32 bg-black text-white flex flex-col items-center justify-center p-2"
+                  >
+                    <span className="text-sm sm:text-base font-bold">JUN</span>
+                    <span
+                      className="text-3xl sm:text-4xl font-bold"
+                      style={{ color: COLORS.PINK }}
+                    >
+                      1
+                    </span>
+                    <span className="text-sm sm:text-base">Sunday</span>
+                  </motion.div>
+                  <div className="flex-grow">
+                    <h3 className="font-space text-xl sm:text-2xl font-bold mb-2">
+                      Road to AssetHub Hackathon: Lucknow Meetup
+                    </h3>
+                    <p className="font-inter text-sm sm:text-base text-black/70 mb-4">
+                      Polkadot Events in India
+                    </p>
+                    <div className="flex items-center gap-2 text-sm sm:text-base text-black/80">
+                      <span>🕒</span>
+                      <span>17:00 - 19:00</span>
+                    </div>
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      transition={{ duration: 0.5, delay: 0.5 }}
+                      viewport={{ once: true }}
+                      className="mt-4"
+                    >
+                      <a
+                        href="https://lu.ma/22id7y1y"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block px-4 py-2 text-sm font-medium hover:opacity-90 transition-opacity"
+                        style={{
+                          backgroundColor: COLORS.PINK,
+                          color: COLORS.WHITE,
+                          border: `2px solid ${COLORS.BLACK}`,
+                        }}
+                      >
+                        Register for Meetup
+                      </a>
+                    </motion.div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
           </motion.div>
         </div>
       </section>
