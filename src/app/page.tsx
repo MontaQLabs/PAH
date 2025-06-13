@@ -821,8 +821,8 @@ export default function Home() {
                           method: "wallet_addEthereumChain",
                           params: [
                             {
-                              chainId: "0x1919191", // 420420421 in hex
-                              chainName: "PassetHub Testnet",
+                              chainId: "0x190F1B46", // 420420422 in hex
+                              chainName: "PAssetHub - Contracts Testnet",
                               nativeCurrency: {
                                 name: "PAS",
                                 symbol: "PAS",
