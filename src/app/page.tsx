@@ -822,7 +822,7 @@ export default function Home() {
                           params: [
                             {
                               chainId: "0x190F1B46", // 420420422 in hex
-                              chainName: "PassetHub Testnet",
+                              chainName: "PAssetHub - Contracts Testnet",
                               nativeCurrency: {
                                 name: "PAS",
                                 symbol: "PAS",
