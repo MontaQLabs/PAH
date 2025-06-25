@@ -377,7 +377,10 @@ export default function Home() {
           </motion.div>
 
           {/* Dates Section */}
-          <section className="py-16 sm:py-24 md:py-32 px-4 relative overflow-hidden">
+          <section
+            id="important-dates"
+            className="py-16 sm:py-24 md:py-32 px-4 relative overflow-hidden"
+          >
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -587,7 +590,10 @@ export default function Home() {
       </section>
 
       {/* Tracks Section */}
-      <section className="py-16 sm:py-24 md:py-32 px-4 relative overflow-hidden">
+      <section
+        id="tracks"
+        className="py-16 sm:py-24 md:py-32 px-4 relative overflow-hidden"
+      >
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -857,7 +863,10 @@ export default function Home() {
       </section>
 
       {/* Rewards Section */}
-      <section className="py-16 sm:py-24 md:py-32 px-4 relative overflow-hidden">
+      <section
+        id="rewards"
+        className="py-16 sm:py-24 md:py-32 px-4 relative overflow-hidden"
+      >
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -1087,7 +1096,10 @@ export default function Home() {
       </section>
 
       {/* Rules Section */}
-      <section className="py-16 sm:py-24 md:py-32 px-4 bg-white text-black relative overflow-hidden">
+      <section
+        id="rules-guidelines"
+        className="py-16 sm:py-24 md:py-32 px-4 bg-white text-black relative overflow-hidden"
+      >
         {/* Background animation elements */}
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
@@ -1234,7 +1246,10 @@ export default function Home() {
       </section>
 
       {/* Prehackathon Meetups Section */}
-      <section className="py-16 sm:py-24 md:py-32 px-4 bg-white text-black relative overflow-hidden">
+      <section
+        id="road-to-assethub-hackathon-meetups"
+        className="py-16 sm:py-24 md:py-32 px-4 bg-white text-black relative overflow-hidden"
+      >
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
             initial={{ x: "-100%" }}
@@ -1609,7 +1624,10 @@ export default function Home() {
       <CommunityPartner />
 
       {/* Mentors & Judges Section */}
-      <section className="py-16 sm:py-24 md:py-32 px-4 bg-white text-black relative overflow-hidden">
+      <section
+        id="mentors-judges"
+        className="py-16 sm:py-24 md:py-32 px-4 bg-white text-black relative overflow-hidden"
+      >
         <div className="max-w-7xl mx-auto relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -2095,7 +2113,10 @@ export default function Home() {
       </section>
 
       {/* CTA Section - Using ahh.jpeg more prominently */}
-      <section className="py-16 sm:py-24 md:py-32 px-4 relative overflow-hidden">
+      <section
+        id="ready-to-build"
+        className="py-16 sm:py-24 md:py-32 px-4 relative overflow-hidden"
+      >
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
