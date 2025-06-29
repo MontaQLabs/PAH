@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { Inter } from "next/font/google";
 import { Unbounded } from "next/font/google";
@@ -61,33 +61,33 @@ const fadeInUp = {
   transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] },
 };
 
-// Create a component for the Register button with link
-const RegisterButton = ({ className = "", style = {} }) => (
-  <Link
-    href="https://dorahacks.io/hackathon/polkadot"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
+// Create a component for the Register button with registration ended state
+const RegisterButton = ({ className = "", style = {} }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
     <motion.button
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
       whileHover={{
         scale: 1.05,
-        backgroundColor: COLORS.WHITE,
-        color: COLORS.PINK,
+        backgroundColor: "#6B7280",
+        color: COLORS.WHITE,
         transition: { duration: 0.3 },
       }}
       whileTap={{ scale: 0.95 }}
       className={`font-inter font-bold py-3 sm:py-4 px-8 sm:px-12 md:px-16 rounded-none text-lg sm:text-xl transition-all shadow-lg ${className} cursor-pointer`}
       style={{
-        backgroundColor: COLORS.PINK,
+        backgroundColor: isHovered ? "#6B7280" : COLORS.PINK,
         color: COLORS.WHITE,
         border: `2px solid ${COLORS.BLACK}`,
         ...style,
       }}
     >
-      REGISTER NOW
+      {isHovered ? "REGISTRATION ENDED" : "REGISTER NOW"}
     </motion.button>
-  </Link>
-);
+  );
+};
 
 // Create a component for the Discord button with link
 const DiscordButton = ({ className = "", style = {} }) => (
@@ -259,6 +259,21 @@ export default function Home() {
             className="mb-10"
           >
             <RegisterButton />
+            <div className="mt-3 text-center">
+              <span className="font-inter text-base text-white/80">
+                For more details visit{' '}
+                <Link
+                  href="https://dorahacks.io/hackathon/polkadot"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bold underline transition-colors"
+                  style={{ color: COLORS.PINK }}
+                >
+                  DoraHacks
+                </Link>
+                .
+              </span>
+            </div>
           </motion.div>
 
           <motion.div
